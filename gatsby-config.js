@@ -102,6 +102,12 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-embed-snippet`,
+            options: {
+              directory: `${__dirname}/content/snippets/`
+            },
+          },
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-katex',
